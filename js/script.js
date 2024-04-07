@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const form = document.querySelector("#modal-lead"),
         formContainer = document.querySelector('.modal-form-container'),
         buttonCallForm = document.querySelectorAll('[data-target=modal]'),
-        userMsg = document.querySelector('.user_msg');
+        userMsg = document.querySelector('.user_msg'),
+        closeBtn = document.querySelector('[data-target=close-modal]');
 
     //Event form send
     form.addEventListener("submit", (event) => {
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function(){
         trySendForm();
     });
 
+    closeBtn.addEventListener('click',(event) => {
+        formContainer.classList.add('d-none');
+    });
 
     // Add call modal to each btn
     buttonCallForm.forEach(btn =>{
