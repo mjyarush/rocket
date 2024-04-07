@@ -3,7 +3,31 @@
     --main-bg-g: #1FA181;
     --main-w: #fff;
     --main-b: #212529;
+    --main-h: #364844;
+    --main-grey: #F8FBFA;
+    --main-bg-sg: #E2F0EF;
+    --main-bg-footer: #08664F;
+    --main-btn-hover: #00D29F;
 }
+html,
+body {
+    min-height: 100%;
+    position: relative;
+}
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+    background: var(--main-bg-footer);
+    width: 100%;
+}
+
 .navbar-brand{
     width: 100%;
     text-align: center;
@@ -19,9 +43,14 @@
     width: 100%;
     font-weight: bold;
 }
+.bg-white{
+    background: var(--main-w);
+}
 .bg-green{
-    background: var(--main-bg-g);
-    opacity: 0.9;
+    background: rgba(69, 146, 127, 0.9);
+}
+.bg-grey{
+    background: var(--main-grey);
 }
 .bg-green .nav-link{
     color: var(--main-w)!important;
@@ -34,20 +63,131 @@
 .my-link:hover{
     color: var(--main-g);
 }
-.my-btn{
+.my-btn-reverse{
     background: var(--main-w);
     color: var(--main-g);
     border-radius: 50px;
 }
+.my-btn-reverse:hover{
+    background: var(--main-g);
+    color: var(--main-w);
+}
+.my-btn{
+    background: var(--main-g);
+    color: var(--main-w);
+    border-radius: 50px;
+}
+.my-btn:hover{
+    background: var(--main-btn-hover);
+    color: var(--main-w);
+}
+.my-btn-outline{
+    border: 1px solid var(--main-g);
+    color: var(--main-g);
+    border-radius: 50px;
+}
+.my-btn-outline:hover{
+    background: var(--main-g);
+    color: var(--main-w);
+}
 .navbar-collapse{
     height: 100vh;
 }
+.h-color-g{
+    color: var(--main-h);
+}
+.img-clinic{
+    max-width: 100%;
+}
+.mt-custom{
+    margin-top: 75px;
+}
+.fixed-top-md{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.swiper {
+    width: 100%;
+    height: auto;
+}
+.swiper-slide{
+    border-radius: 5px;
+}
+.my-swiper-pagination{
+    width:50px;
+}
+.my-swiper-button-prev:hover,.my-swiper-button-next:hover{
+    color: var(--main-g)!important;
+}
+.swiper-pagination-current{
+    font-weight: bold;
+}
+.my-marker li{
+    color: var(--main-h);
+}
+.my-marker li::marker{
+    color: var(--main-g);
+}
+.bg-sg{
+    background: var(--main-bg-sg);
+}
+.img-cover{
 
+    height: 170px;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+footer .my-link{
+    color: var(--main-w);
+}
+.footer-link{
+    padding: .5rem 0;
+}
+footer .social{
+    aspect-ratio: 1/1;
+    width: 18px;
+    margin: 0 .5rem;
+}
+.copyright{
+    color: var(--main-w);
+    font-size: 0.7rem;
+    text-align: center;
+}
+.modal-form-container{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1099;
+    background: rgba(33, 37, 41, 0.4);
+}
+.modal-form{
+    max-width: 600px;
+    min-width: 350px;
+    margin: 0;
+    padding: 2rem 3rem;
+    background: var(--main-bg-sg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+[data-target=close-modal]{
+    cursor: pointer;
+}
 @media (min-width: 576px) {
     .navbar-brand img{
         width: 100px;
     }
-
     .contact-h{
         width: auto;
         font-weight: normal;
@@ -56,15 +196,48 @@
         width: unset;
         margin-right: 1rem;
     }
-
+    .footer-nav{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer-link{
+        padding: .5rem;
+    }
+}
+@media (min-width: 992px){
+    .img-cover{
+        height: 100%;
+    }
+    footer .social{
+        aspect-ratio: 1/1;
+        width:auto;
+    }
 }
 @media (min-width: 1200px) {
     .navbar-collapse{
         height: auto;
     }
-    .my-btn{
+    .my-btn-reverse{
         background: var(--main-g);
         color: var(--main-w);
-        border-radius: 50px;
+    }
+    .bg-green{
+        background: var(--main-bg-g);
+    }
+    .mt-custom{
+        margin-top: unset;
+    }
+    .img-clinic{
+        max-width: unset;
+    }
+    .fixed-top-md{
+        position: relative;
+        top: unset;
+        right: unset;
+        left: unset;
+        z-index: unset;
+    }
+    .p-width{
+        max-width: 320px;
     }
 }

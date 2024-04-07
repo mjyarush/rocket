@@ -14,70 +14,250 @@
     <title>Многопрофильная клиника для детей и взрослых</title>
 </head>
 <body>
-<header>
-    <div class="container-fluid px-0">
-        <nav class="navbar navbar-expand-lg navbar-light flex-column">
-            <!-- Top nav -->
-            <div class="container py-3">
-                <div class="row w-100 align-items-center">
-                    <div class="col-2  d-lg-none">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    <div class="col-4 col-md-5 col-lg-6 d-flex">
-                        <a class="navbar-brand" href="#"><img src="/img/logos/LOGO_g.png" alt=""></a>
-                        <div class="address-h d-none d-md-flex flex-column">
-                            <div><img src="/img/icons/placeholder.svg" class="text-muted"> г. Ростов-на-Дону</div>
-                            <div class="text-muted ps-4">ул. Ленина, 2Б</div>
+<div class="main-wrapper">
+    <div class="content">
+        <header>
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg navbar-light flex-column fixed-top-md py-0">
+                    <!-- Top nav -->
+                    <div class="container py-3 bg-white  px-lg-0">
+                        <div class="row w-100 align-items-center">
+                            <div class="col-2  d-lg-none">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                            <div class="col-4 col-md-5 col-lg-6 d-flex">
+                                <a class="navbar-brand" href="#"><img src="/img/logos/LOGO_g.png" alt=""></a>
+                                <div class="address-h d-none d-md-flex flex-column">
+                                    <div><img src="/img/icons/placeholder.svg" class="text-muted"> г. Ростов-на-Дону</div>
+                                    <div class="text-muted ps-4">ул. Ленина, 2Б</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-5 col-lg-6">
+                                <div class="d-flex flex-column flex-md-row align-items-center h-100 text-end text-md-start justify-content-end ">
+                                    <a href="https://api.whatsapp.com/send/?phone=78630000000&text=Здравствуйте%2C+у+меня+есть+вопрос" target="_blank" class="d-none d-md-inline-block"><img src="/img/logos/whatsapp_h.png"></a>
+                                    <a href="tel:+78630000000" class="my-link ps-2 contact-h text-nowrap">+7(863) 000 00 00</a>
+                                    <span class="d-md-none w-100">г.Ростов-на-Дону</span>
+                                    <a href="#" class="btn my-btn ms-3 d-none d-lg-inline-block" data-target="modal">Записаться на прием</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-5 col-lg-6">
-                        <div class="d-flex flex-column flex-md-row align-items-center h-100 text-end text-md-start justify-content-end ">
-                            <a href="https://api.whatsapp.com/send/?phone=78630000000&text=Здравствуйте%2C+у+меня+есть+вопрос" target="_blank" class="d-none d-md-inline-block"><img src="/img/logos/whatsapp_h.png"></a>
-                            <a href="tel:+78630000000" class="my-link ps-2 contact-h text-nowrap">+7(863) 000 00 00</a>
-                            <span class="d-md-none w-100">г.Ростов-на-Дону</span>
-                            <a href="#" class="btn my-btn ms-3 d-none d-lg-inline-block">Записаться на прием</a>
+                    <!-- Bottom nav -->
+                    <div class="container-fluid bg-green p-0">
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <div class="container py-md-2 px-lg-0">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item pe-lg-3">
+                                        <a class="nav-link active ps-lg-0 " aria-current="page" href="#"> О клинике</a>
+                                    </li>
+                                    <li class="nav-item px-lg-3">
+                                        <a class="nav-link" href="#">Услуги</a>
+                                    </li>
+                                    <li class="nav-item px-lg-3">
+                                        <a class="nav-link" href="#">Специалисты</a>
+                                    </li>
+                                    <li class="nav-item px-lg-3">
+                                        <a class="nav-link" href="#">Цены</a>
+                                    </li>
+                                    <li class="nav-item px-lg-3">
+                                        <a class="nav-link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="nav-item d-lg-none pt-3">
+                                        <a class="btn my-btn-reverse" href="#" data-target="modal">Записаться на прием</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="container-fluid bg-grey my-0 py-0 overflow-hidden">
+            <div class="container pe-0">
+                <div class="row align-items-center mt-custom py-lg-0 pe-md-0" >
+                    <div class="col-12 col-md-6 order-2 order-md-1 py-3 py-lg-0">
+                        <div class="p-width">
+                            <h2 class="h-color-g">
+                                Многопрофильная<br>
+                                клиника для детей<br>
+                                и взрослых
+                            </h2>
+                            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-1 order-md-2">
+                        <img src="/img/page_img/clinic.png" class="img-clinic">
                     </div>
                 </div>
             </div>
-            <!-- Bottom nav -->
-            <div class="container-fluid bg-green px-0">
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <div class="container py-md-2">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item pe-md-3">
-                                <a class="nav-link active" aria-current="page" href="#"> О клинике</a>
-                            </li>
-                            <li class="nav-item px-md-3">
-                                <a class="nav-link" href="#">Услуги</a>
-                            </li>
-                            <li class="nav-item px-md-3">
-                                <a class="nav-link" href="#">Специалисты</a>
-                            </li>
-                            <li class="nav-item px-md-3">
-                                <a class="nav-link" href="#">Цены</a>
-                            </li>
-                            <li class="nav-item px-md-3">
-                                <a class="nav-link" href="#">Контакты</a>
-                            </li>
-                            <li class="nav-item d-lg-none">
-                                <a class="btn my-btn" href="#">Записаться на прием</a>
-                            </li>
-                        </ul>
+        </div>
+        <div class="container py-5">
+            <div class="swiper my-5">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide px-5">
+                        <div class="row">
+                            <div class="col-12 col-md-6 ps-4 ps-md-5 py-5 bg-sg order-2 order-md-1">
+                                <h2 class="h-color-g fw-bold">
+                                    <span class="text-uppercase">Check-UP</span> <br>
+                                </h2>
+                                <h5 class="h-color-g fw-bold">для мужчин</h5>
+                                <ul class="my-marker py-3 px-0 ps-3">
+                                    <li>Гормональный скрининг</li>
+                                    <li>Тестостерон</li>
+                                    <li>Свободный тестостерон</li>
+                                    <li>Глобулин, связывающий половые гормоны</li>
+                                </ul>
+                                <div class="row justify-content-center justify-content-md-start p-3">
+                                    <a href="#" class="col-5 col-md-4 btn my-btn px-md-4 me-3" data-target="modal">
+                                        Записаться
+                                    </a>
+                                    <a href="#" class="col-5 col-md-4 btn my-btn-outline px-md-4">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-0 order-1 order-md-2">
+                                <div class="img-cover" style="background: center / cover no-repeat url('/img/page_img/doctor-working-table.png')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="row">
+                            <div class="col-12 col-md-6 ps-4 ps-md-5 py-5 bg-sg order-2 order-md-1">
+                                <h2 class="h-color-g fw-bold">
+                                    <span class="text-uppercase">Check-UP</span> <br>
+                                </h2>
+                                <h5 class="h-color-g fw-bold">для мужчин</h5>
+                                <ul class="my-marker py-3 px-0 ps-3">
+                                    <li>Гормональный скрининг</li>
+                                    <li>Тестостерон</li>
+                                    <li>Свободный тестостерон</li>
+                                    <li>Глобулин, связывающий половые гормоны</li>
+                                </ul>
+                                <div class="row justify-content-center justify-content-md-start p-3">
+                                    <a href="#" class="col-5 col-md-4 btn my-btn px-md-4 me-3" data-target="modal">
+                                        Записаться
+                                    </a>
+                                    <a href="#" class="col-5 col-md-4 btn my-btn-outline px-md-4">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-0 order-1 order-md-2">
+                                <div class="img-cover" style="background: center / cover no-repeat url('/img/page_img/doctor-working-table.png')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-5">
+                        <div class="row">
+                            <div class="col-12 col-md-6 ps-4 ps-md-5 py-5 bg-sg order-2 order-md-1">
+                                <h2 class="h-color-g fw-bold">
+                                    <span class="text-uppercase">Check-UP</span> <br>
+                                </h2>
+                                <h5 class="h-color-g fw-bold">для мужчин</h5>
+                                <ul class="my-marker py-3 px-0 ps-3">
+                                    <li>Гормональный скрининг</li>
+                                    <li>Тестостерон</li>
+                                    <li>Свободный тестостерон</li>
+                                    <li>Глобулин, связывающий половые гормоны</li>
+                                </ul>
+                                <div class="row justify-content-center justify-content-md-start p-3">
+                                    <a href="#" class="col-5 col-md-4 btn my-btn px-md-4 me-3" data-target="modal">
+                                        Записаться
+                                    </a>
+                                    <a href="#" class="col-5 col-md-4 btn my-btn-outline px-md-4">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-0 order-1 order-md-2">
+                                <div class="img-cover" style="background: center / cover no-repeat url('/img/page_img/doctor-working-table.png')">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div id="my-controls" class="d-flex justify-content-center align-items-center py-3 text-muted">
+                    <div class="my-swiper-button-prev fs-2">&#8592;</div>
+                    <div class="my-swiper-pagination text-center"></div>
+                    <div class="my-swiper-button-next fs-2">&#8594;</div>
+                </div>
             </div>
-        </nav>
-    </div>
-</header>
-<div class="container">
-    <span class="text-danger">&#8592;&#8594;</span>
-</div>
-<footer>
 
+        </div>
+    </div>
+    <div class="modal-form-container d-none">
+            <div class="modal-form">
+                <div class="text-danger w-100 text-end" data-target="close-modal">X</div>
+                <form id="modal-lead">
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">Ваш имя <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="user_name" name="user_name" aria-describedby="nameErr" required>
+                        <div id="nameErr" class="d-none form-text text-danger"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="user_mail" class="form-label">Ваш email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="user_mail" name="user_mail" aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">Ваши данные надежно защищены.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="user_phone" class="form-label">Ваш телефон <span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" id="user_phone" name="user_phone" aria-describedby="phoneErr" required>
+                        <div id="phoneErr" class="d-none form-text text-danger"></div>
+                    </div>
+                    <button type="submit" class="btn my-btn">Отправить</button>
+                </form>
+                <div class="user_msg d-none">
+
+                </div>
+            </div>
+    </div>
+<footer class="footer">
+    <div class="container pt-5">
+        <div class="row align-items-center">
+            <div class="col-6 col-md-2 order-1">
+                <img src="/img/logos/logo_w.png" alt="">
+            </div>
+            <div class="col-12 col-md-8 order-3 order-md-2 text-lg-center py-3 py-md-0">
+                <ul class="footer-nav">
+                    <li class="footer-link">
+                        <a href="#" class="my-link">О клинике</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#" class="my-link">Услуги</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#" class="my-link">Специалисты</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#" class="my-link">Цены</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#" class="my-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 order-2 order-md-3">
+                <div class="d-flex align-items-center h-100">
+                    <a href="#"><img src="/img/logos/instagram.png" class="social"></a>
+                    <a href="#"><img src="/img/logos/whatsapp_f.png" class="social"></a>
+                    <a href="#"><img src="/img/logos/telegram.png" class="social"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright py-3">
+            © 2024 г. - Специально для Rocket Business
+        </div>
+    </div>
 </footer>
+</div>
+
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <!-- Swiper.js -->
