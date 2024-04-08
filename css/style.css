@@ -177,7 +177,7 @@ footer .social{
     padding: 2rem 3rem;
     background: var(--main-bg-sg);
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

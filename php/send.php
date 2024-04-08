@@ -1,6 +1,7 @@
 <?php
-const TO  = 'rbru-metrika@yandex.ru';// note the comma
-
+//const TO  = 'rbru-metrika@yandex.ru';
+const TO  = 'maksim222@list.ru';// note the comma
+$subject = 'Форма записи';
 //Get field vars
 $formData= [
     'user_name' => $_POST['user_name'],
@@ -8,49 +9,37 @@ $formData= [
     'user_phone' => $_POST['user_phone'],
     ];
 
-// subject
-$subject = 'Форма записи';
-
 // message
-$message = '
-<html>
-<head>
-  <title>Birthday Reminders for August</title>
-</head>
-<body>
-  <p>Here are the birthdays upcoming in August!</p>
-  <table>
-    <tr>
-      <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
-    </tr>
-    <tr>
-      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
-    </tr>
-    <tr>
-      <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
-    </tr>
-  </table>
-</body>
-</html>
-';
+$message = <<<HTML
+    <html>
+    <head>
+      <title>$subject от $formData[user_name]</title>
+    </head>
+    <body>
+      <p>Here are the birthdays upcoming in August!</p>
+      <table>
+        <tr>
+          <th>Name</th><th>Phone</th><th>Email</th>
+        </tr>
+        <tr>
+          <td>$formData[user_name]</td><td>$formData[user_phone]</td><td>$formData[user_mail]</td>
+        </tr>
+      </table>
+    </body>
+    </html>
+HTML;
 
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers = 'From: mjyarush@yandex.ru' . "\r\n" .
+    'Reply-To: mjyarush@yandex.ru' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-// Additional headers
-$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
 // Mail it
-//mail(TO, $subject, $message, $headers);
+$status = mail(TO, $subject, $message, $headers);
 
-$response_msg = [
-    'status' => 'send',
-    'error' => false
-];
+$response_msg['status'] = $status ? 'send' : 'none';
+
+$response_msg['error'] = false;
 
 
 echo json_encode($response_msg);

@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function(){
             displayServerMsg(data);
         }
         catch (err) {
+            document.querySelector('body').append(err);
             console.log(err);
         }
     }
@@ -102,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function(){
         return res;
 
     }
-
     function displayFormErr(msg) {
         let nameErr = form.querySelector('#nameErr'),
             phoneErr = form.querySelector('#phoneErr');
